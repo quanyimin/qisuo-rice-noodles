@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七嗦·湖南米粉 | 爱米粉·就七嗦 | 北京热门米粉品牌</title>
+    <meta name="description" content="七嗦·湖南米粉 - 北京回购率十大品牌，以大骨牛汤为特色，提供加盟招商服务。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:wght@700;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #E63946;
+            --deep-orange: #F77F00;
+            --warm-red: #D62828;
+            --cream: #F8F9FA;
+            --dark: #1A1A1A;
+            --gray: #6C757D;
+            --gold: #FFB703;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: var(--dark);
+            background: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--dark);
+            background-image: url('./imgs/hero_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--warm-red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-red);
+            transform: translateY(-3px);
+        }
+
+        /* Honors Band */
+        .honors {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--deep-orange) 100%);
+            padding: 32px 0;
+            overflow: hidden;
+        }
+
+        .honors-scroll {
+            display: flex;
+            gap: 48px;
+            animation: scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .honor-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .honor-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Section Base */
+        section {
+            padding: 120px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 64px;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-red);
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Brand Story */
+        .brand-story {
+            background: white;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .brand-text h3 {
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .brand-text p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .brand-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .highlight-item {
+            padding: 20px;
+            background: var(--cream);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .highlight-item strong {
+            display: block;
+            color: var(--primary-red);
+            margin-bottom: 8px;
+            font-size: 1.125rem;
+        }
+
+        .brand-image {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .brand-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .brand-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Products */
+        .products {
+            background: var(--cream);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(230, 57, 70, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--primary-red);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-name {
+            font-size: 1.375rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .product-desc {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Stores */
+        .stores {
+            background: white;
+        }
+
+        .store-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .store-item {
+            padding: 32px;
+            background: var(--cream);
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .store-item:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-4px);
+        }
+
+        .store-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:0 auto 16px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .store-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* Data Section */
+        .data-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--warm-red) 100%);
+            color: white;
+        }
+
+        .data-section .section-title {
+            color: white;
+        }
+
+        .data-section .section-title::after {
+            background: white;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+
+        .data-item {
+            padding: 32px;
+        }
+
+        .data-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .data-label {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+
+        /* Franchise */
+        .franchise {
+            background: var(--cream);
+        }
+
+        .franchise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .franchise-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .franchise-card:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-8px);
+        }
+
+        .franchise-tier {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--primary-red);
+            margin-bottom: 16px;
+        }
+
+        .franchise-investment {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+
+        .franchise-profit {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 24px;
+        }
+
+        .franchise-profit span {
+            color: var(--gold);
+        }
+
+        .support-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 64px;
+        }
+
+        .support-item {
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .support-item h3 {
+            color: var(--primary-red);
+            font-size: 1.375rem;
+            margin-bottom: 16px;
+        }
+
+        .support-item ul {
+            list-style: none;
+        }
+
+        .support-item li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .support-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 64px 20px 32px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: var(--primary-red);
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin: 32px 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            font-size: 1.125rem;
+        }
+
+        .contact-item strong {
+            color: var(--primary-red);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-red);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--gray);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 20px;
+            }
+
+            .brand-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .brand-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .franchise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .support-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-contact {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* SVG Icons */
+        .icon-map {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">七嗦·湖南米粉</h1>
+            <p class="hero-subtitle">爱米粉·就七嗦 | 北京热门米粉品牌</p>
+            <div class="hero-cta">
+                <a href="tel:400-8833-219" class="btn btn-primary">立即点餐</a>
+                <a href="tel:400-668-6803" class="btn btn-secondary">加盟咨询</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honors Band -->
+    <div class="honors">
+        <div class="honors-scroll">
+            <div class="honor-item">
+                <svg class="honor-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>2025年福布斯&湖南商务厅创业大赛入选品牌</span>
+            </div>
+            <div class="honor-item">
+                <svg class="honor-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>北京回购率十大品牌</span>
+            </div>
+            <div class="honor-item">
+                <svg class="honor-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>好评榜米粉品牌第一名</span>
+            </div>
+            <div class="honor-item">
+                <svg class="honor-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>2025年福布斯&湖南商务厅创业大赛入选品牌</span>
+            </div>
+            <div class="honor-item">
+                <svg class="honor-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>北京回购率十大品牌</span>
+            </div>
+            <div class="honor-item">
+                <svg class="honor-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>好评榜米粉品牌第一名</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Story -->
+    <section class="brand-story fade-in">
+        <h2 class="section-title">品牌故事</h2>
+        <div class="brand-grid">
+            <div class="brand-text">
+                <h3>财源滚滚（北京）餐饮管理有限公司</h3>
+                <p>成立于2020年，七嗦·湖南米粉致力于将正宗的湖南风味带到北京。我们以大骨牛汤为特色，精选25款SKU，确保每一碗米粉都油而不腻、唇齿留香。</p>
+                <p>作为北京热门米粉品牌，我们始终坚持品质第一、客户至上的核心价值观，践行利他思维和长期主义，为每一位顾客提供最地道的湖南米粉体验。</p>
+                <div class="brand-highlights">
+                    <div class="highlight-item">
+                        <strong>品质第一</strong>
+                        <span>大骨牛汤 · 正宗湖南风味</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>客户至上</strong>
+                        <span>回购率第一 · 好评如潮</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>利他思维</strong>
+                        <span>供应链保障 · 全方位支持</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>长期主义</strong>
+                        <span>持续创新 · 稳健发展</span>
+                    </div>
+                </div>
+            </div>
+            <div class="brand-image">
+                <img src="./imgs/brand_story.jpg" alt="七嗦品牌形象" loading="lazy" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products fade-in">
+        <h2 class="section-title">招牌产品</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_01_spicy_beef.jpg" alt="常德麻辣牛肉米粉" loading="lazy" onerror="this.style.display='none'">
+                    <span class="product-badge">最受欢迎</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">常德麻辣牛肉米粉</h3>
+                    <p class="product-desc">鲜嫩牛肉搭配秘制辣椒油，香辣过瘾</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_02_dry_noodles.jpg" alt="香辣酱干拌粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">香辣酱干拌粉</h3>
+                    <p class="product-desc">浓郁酱香，干拌爽滑，越吃越香</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_03_pickled_chicken.jpg" alt="泡椒鸡杂米粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">泡椒鸡杂米粉</h3>
+                    <p class="product-desc">酸辣开胃，鲜嫩鸡杂，回味无穷</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_04_bamboo_pork.jpg" alt="酸笋尖肉丝米粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">酸笋尖肉丝米粉</h3>
+                    <p class="product-desc">清爽酸笋，嫩滑肉丝，清香扑鼻</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_05_clear_beef.jpg" alt="清汤牛肉米粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">清汤牛肉米粉</h3>
+                    <p class="product-desc">大骨熬制，清香浓郁，原汁原味</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_06_tripe.jpg" alt="秘制牛杂米粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">秘制牛杂米粉</h3>
+                    <p class="product-desc">特色牛杂，卤香四溢，鲜美诱人</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_07_intestine.jpg" alt="秘制肥肠米粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">秘制肥肠米粉</h3>
+                    <p class="product-desc">软糯肥肠，香而不腻，回味悠长</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./imgs/product_08_luosifen.jpg" alt="原味螺蛳粉" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">原味螺蛳粉</h3>
+                    <p class="product-desc">经典螺蛳粉，酸辣鲜香，地道风味</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stores -->
+    <section class="stores fade-in">
+        <h2 class="section-title">门店分布</h2>
+        <div class="store-list">
+            <div class="store-item">
+                <div class="store-icon">三</div>
+                <div class="store-name">三里屯SOHO店</div>
+            </div>
+            <div class="store-item">
+                <div class="store-icon">朝</div>
+                <div class="store-name">朝外SOHO店</div>
+            </div>
+            <div class="store-item">
+                <div class="store-icon">国</div>
+                <div class="store-name">国贸店</div>
+            </div>
+            <div class="store-item">
+                <div class="store-icon">常</div>
+                <div class="store-name">常营店</div>
+            </div>
+            <div class="store-item">
+                <div class="store-icon">通</div>
+                <div class="store-name">通州万达店</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Section -->
+    <section class="data-section fade-in">
+        <h2 class="section-title">傲人业绩</h2>
+        <p style="text-align: center; font-size: 1.25rem; margin-bottom: 48px; opacity: 0.9;">常营店2023年美团外卖数据</p>
+        <div class="data-grid">
+            <div class="data-item">
+                <span class="data-number">65万</span>
+                <span class="data-label">年外卖收入</span>
+            </div>
+            <div class="data-item">
+                <span class="data-number">23,205</span>
+                <span class="data-label">年接单笔数</span>
+            </div>
+            <div class="data-item">
+                <span class="data-number">9,657</span>
+                <span class="data-label">回头客数量</span>
+            </div>
+            <div class="data-item">
+                <span class="data-number">#1</span>
+                <span class="data-label">好评榜 · 回头率榜</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franchise -->
+    <section class="franchise fade-in">
+        <h2 class="section-title">加盟招商</h2>
+        <p style="text-align: center; font-size: 1.375rem; color: var(--primary-red); margin-bottom: 48px; font-weight: 700;">想创业·选七嗦</p>
+        
+        <div class="franchise-grid">
+            <div class="franchise-card">
+                <div class="franchise-tier">⭐⭐⭐ 三星迷你店</div>
+                <div class="franchise-investment">投资：15-26万</div>
+                <div class="franchise-profit">年净利润：<span>36万</span></div>
+                <a href="tel:400-8833-219" class="btn btn-primary" style="width: 100%;">立即咨询</a>
+            </div>
+
+            <div class="franchise-card">
+                <div class="franchise-tier">⭐⭐⭐⭐ 四星标准店</div>
+                <div class="franchise-investment">投资：18-34万</div>
+                <div class="franchise-profit">年净利润：<span>48万</span></div>
+                <a href="tel:400-8833-219" class="btn btn-primary" style="width: 100%;">立即咨询</a>
+            </div>
+
+            <div class="franchise-card">
+                <div class="franchise-tier">⭐⭐⭐⭐⭐ 五星旗舰店</div>
+                <div class="franchise-investment">投资：21-37万</div>
+                <div class="franchise-profit">年净利润：<span>60万</span></div>
+                <a href="tel:400-8833-219" class="btn btn-primary" style="width: 100%;">立即咨询</a>
+            </div>
+        </div>
+
+        <div class="support-list">
+            <div class="support-item">
+                <h3>供应链保障</h3>
+                <ul>
+                    <li>核心原料总部直供</li>
+                    <li>中央厨房统一出品</li>
+                    <li>品质标准化管理</li>
+                    <li>物流配送体系完善</li>
+                </ul>
+            </div>
+
+            <div class="support-item">
+                <h3>运营支持</h3>
+                <ul>
+                    <li>单店精细化运营指导</li>
+                    <li>外卖运营全面赋能</li>
+                    <li>营销方案定制支持</li>
+                    <li>数据分析与优化</li>
+                </ul>
+            </div>
+
+            <div class="support-item">
+                <h3>培训体系</h3>
+                <ul>
+                    <li>总部10-15天专业培训</li>
+                    <li>操作流程标准化教学</li>
+                    <li>管理技能全面提升</li>
+                    <li>持续跟踪辅导服务</li>
+                </ul>
+            </div>
+
+            <div class="support-item">
+                <h3>品牌资质</h3>
+                <ul>
+                    <li>商务部正规备案</li>
+                    <li>特许经营许可证</li>
+                    <li>35类/43类商标保护</li>
+                    <li>全域营销推广支持</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">七嗦·湖南米粉</div>
+            <p style="font-size: 1.125rem; margin-bottom: 32px;">爱米粉·就七嗦 | 想创业·选七嗦</p>
+            
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <strong>加盟热线</strong>
+                    <div>400-8833-219</div>
+                    <div>400-668-6803</div>
+                </div>
+                <div class="contact-item">
+                    <strong>运营公司</strong>
+                    <div>财源滚滚（北京）餐饮管理有限公司</div>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" class="social-link" title="抖音">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="视频号">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="小红书">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2020-2026 财源滚滚（北京）餐饮管理有限公司 版权所有</p>
+                <p style="margin-top: 8px;">商务部备案 | 特许经营许可证 | 35类/43类商标</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
