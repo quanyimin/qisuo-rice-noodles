@@ -1,2 +1,0 @@
-# qisuo-rice-noodles
-qisuomifen
